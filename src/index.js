@@ -3,7 +3,7 @@ window.onscroll = function () {
   };
   let ul = document.querySelector("#main-navbar-ul"); 
   let navbar = document.querySelector("#main-navbar");
-  let about = document.querySelector(".main-buttons").offsetTop;
+  let about = navbar.offsetTop;
     
   function myFunction() {
     if (window.scrollY >= about) {
