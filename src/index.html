@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="scroll-smooth">
 
-<head> 
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
@@ -38,11 +38,48 @@
     .main-buttons>* {
       flex: 1;
     }
+
+    .custom-hide {
+      position: absolute;
+      opacity: 0;
+      animation: slide-out 0.25s ease-out backwards;
+    }
+
+    @keyframes slide-in {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      } to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-out {
+      from {
+        transform: translateX(0);
+        opacity: 1;
+      } to {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+    }
+
+    .fixed-main {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      animation: slide-in 0.25s ease-out forwards;
+    }
+    
+    .custom-transparent {
+      background-color: rgba(0, 0, 0, 0.801);
+    }
   </style>
 </head>
 
 <body class="bg-black text-[#EDF0F2]">
-  <div class="flex flex-col justify-end pb-32 h-screen lg:mx-20 sm:mx-10 mx-5">
+  <div class="flex flex-col justify-end pb-32 h-screen lg:mx-20 sm:mx-10 mx-5" id="main">
     <h1 class="my-5 lg:text-8xl md:text-7xl sm:text-6xl text-5xl">Mateusz Karpiński</h1>
     <div class="flex flex-wrap gap-4 main-buttons">
       <a href="#about" class="w-full sm:w-full lg:w-1/3">
@@ -80,9 +117,26 @@
       </a>
     </div>
   </div>
-  <div class="h-screen" id="about">element2</div>
-  <div class="h-screen" id="projects">element3</div>
-  <div class="h-screen" id="contact">element4</div>
+  <div class="custom-hide custom-transparent" id="main-navbar">
+    <ul class="list-none flex justify-center gap-16 p-5" id="main-navbar-ul">
+      <a href="#main">
+        <li>Mateusz Karpinski</li>
+      </a>
+      <a href="#about">
+        <li>About</li>
+      </a>
+      <a href="#projects">
+        <li>Projects</li>
+      </a>
+      <a href="#contact">
+        <li>Contact</li>
+      </a>
+    </ul>
+  </div>
+  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="about"><h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">About</h2></div>
+  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="projects"><h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Projects</h2></div>
+  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="contact"><h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Contact</h2></div>
+  <script src="index.js"></script>
 </body>
 
 </html>
