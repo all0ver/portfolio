@@ -49,7 +49,9 @@
       from {
         transform: translateX(-100%);
         opacity: 0;
-      } to {
+      }
+
+      to {
         transform: translateX(0);
         opacity: 1;
       }
@@ -59,7 +61,9 @@
       from {
         transform: translateX(0);
         opacity: 1;
-      } to {
+      }
+
+      to {
         transform: translateX(-100%);
         opacity: 0;
       }
@@ -71,7 +75,7 @@
       width: 100%;
       animation: slide-in 0.25s ease-out forwards;
     }
-    
+
     .custom-transparent {
       background-color: rgba(0, 0, 0, 0.801);
     }
@@ -118,24 +122,39 @@
     </div>
   </div>
   <div class="custom-hide custom-transparent" id="main-navbar">
-    <ul class="list-none flex justify-center gap-16 p-5" id="main-navbar-ul">
-      <a href="#main">
+    <button class="cursor-pointer hidden max-[700px]:block absolute right-10 top-8" id="hamburger-button">
+      <ul>
+        <li class="border-2 w-8 my-2"></li>
+        <li class="border-2 w-8 my-2"></li>
+        <li class="border-2 w-8 my-2"></li>
+      </ul>
+    </button>
+    <ul
+      class="list-none flex justify-center gap-16 p-5 max-[700px]:hidden max-[700px]:flex-col max-[700px]:w-screen max-[700px]:h-screen max-[700px]:text-2xl"
+      id="main-navbar-ul">
+      <a href="#main" class="main-navbar-a">
         <li>Mateusz Karpinski</li>
       </a>
-      <a href="#about">
+      <a href="#about" class="main-navbar-a">
         <li>About</li>
       </a>
-      <a href="#projects">
+      <a href="#projects" class="main-navbar-a">
         <li>Projects</li>
       </a>
-      <a href="#contact">
+      <a href="#contact" class="main-navbar-a">
         <li>Contact</li>
       </a>
     </ul>
   </div>
-  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="about"><h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">About</h2></div>
-  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="projects"><h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Projects</h2></div>
-  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="contact"><h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Contact</h2></div>
+  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="about">
+    <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">About</h2>
+  </div>
+  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="projects">
+    <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Projects</h2>
+  </div>
+  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="contact">
+    <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Contact</h2>
+  </div>
   <script src="index.js"></script>
 </body>
 
