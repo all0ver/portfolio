@@ -79,6 +79,10 @@
     .custom-transparent {
       background-color: rgba(0, 0, 0, 0.9);
     }
+
+    .custom-filter {
+      filter: invert(89%) sepia(7%) saturate(77%) hue-rotate(161deg) brightness(108%) contrast(92%);
+    }
   </style>
 </head>
 
@@ -151,7 +155,7 @@
   <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 py-20 flex flex-col" id="about">
     <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">About</h2>
     <div
-      class="flex-1 w-full h-full grid grid-cols-2 gap-4 grid-rows-2 max-[800px]:grid-cols-1 max-[800px]:grid-rows-4">
+      class="flex-1 w-full h-full grid grid-cols-2 gap-4 grid-rows-2 max-[800px]:grid-cols-1 max-[800px]:grid-rows-none">
       <div class="">1</div>
       <div>
         <p class="py-2">
@@ -177,7 +181,17 @@
           The Witcher, Cyberpunk 2077 or Red Dead Redemption 2.
         </p>
       </div>
-      <div class="">4</div>
+      <div class="flex items-center justify-center gap-14 max-[800px]:mt-24">
+        <!-- 
+        icons:
+          github: https://www.svgrepo.com/svg/521688/github
+          linkedin: https://www.svgrepo.com/svg/521725/linkedin
+          instagram: https://www.svgrepo.com/svg/521711/instagram 
+        -->
+        <a href="https://github.com/all0ver" class="h-fit"><img class="h-16 custom-filter" src="/img/github.svg" alt="github"></a>
+        <a href="https://www.linkedin.com/in/mateusz-karpi%C5%84ski-2911a6264/" class="h-fit"><img class="h-16 custom-filter" src="/img/linkedin.svg" alt="github"></a>
+        <a href="https://www.instagram.com/m.karpinski_/" class="h-fit"><img class="h-16 custom-filter" src="/img/instagram.svg" alt="instagram"></a>
+      </div>
     </div>
   </div>
   <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="projects">
