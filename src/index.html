@@ -77,7 +77,7 @@
     }
 
     .custom-transparent {
-      background-color: rgba(0, 0, 0, 0.801);
+      background-color: rgba(0, 0, 0, 0.9);
     }
   </style>
 </head>
@@ -122,7 +122,9 @@
     </div>
   </div>
   <div class="custom-hide custom-transparent" id="main-navbar">
-    <button class="cursor-pointer hidden max-[700px]:block absolute right-10 top-8" id="hamburger-button">
+    <button
+      class="cursor-pointer hidden max-[700px]:flex absolute w-screen right-0 top-0 p-10 justify-end custom-transparent"
+      id="hamburger-button">
       <ul>
         <li class="border-2 w-8 my-2"></li>
         <li class="border-2 w-8 my-2"></li>
@@ -146,10 +148,37 @@
       </a>
     </ul>
   </div>
-  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="about">
+  <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 py-20 flex flex-col content-around" id="about">
     <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">About</h2>
+    <div class="flex flex-1 items-end">
+      <p class="py-5 text-lg basis-3/5 max-[800px]:text-base max-[700px]:basis-full">
+        I'm a 20-year-old from Warsaw, currently studying cryptology and cybersecurity at the Military University of
+        Technology in Warsaw. My hobbies include Linux, web development, cybersecurity, skateboarding, and exploring
+        all aspects of
+        computer technology. I am currently working on my JavaScript, React, and Tailwind CSS skills. In my free time,
+        I
+        enjoy watching films and TV series, and I also love playing computer games from Counter-Stirke to
+        The Witcher, Cyberpunk 2077 or Red Dead Redemption 2.
+      </p>
+
+    </div>
+    <div class="flex-1 mt-8">
+      <p class="py-2">
+      <h2 class="text-2xl font-bold">Currently working with:</h2>
+      <ul>
+        <li class="px-3 py-1">Linux</li>
+        <li class="px-3 py-1">HTML</li>
+        <li class="px-3 py-1">CSS/SCSS</li>
+        <li class="px-3 py-1">Tailwind CSS</li>
+        <li class="px-3 py-1">JavaScript</li>
+        <li class="px-3 py-1">and learning React</li>
+      </ul>
+      </p>
+    </div>
+
+
   </div>
-  <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="projects">
+  <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="projects">
     <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Projects</h2>
   </div>
   <div class="h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="contact">
