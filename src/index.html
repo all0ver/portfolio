@@ -83,10 +83,9 @@
     .custom-filter {
       filter: invert(89%) sepia(7%) saturate(77%) hue-rotate(161deg) brightness(108%) contrast(92%);
     }
-   
   </style>
-  
-  
+
+
 </head>
 
 <body class="bg-black text-[#EDF0F2]">
@@ -161,19 +160,6 @@
       class="flex-1 w-full h-full grid grid-cols-2 gap-4 grid-rows-2 max-[800px]:grid-cols-1 max-[800px]:grid-rows-none">
       <div class="flex justify-center items-center">
         <img src="/img/person.svg" alt="person" class="custom-filter h-32">
-        <!-- <p class="text-3xl">https://www.about.me
-        icon license:
-          MIT License
-          You are free:
-
-          to share – to copy, distribute and transmit the work
-          to remix – to adapt the work
-          Under the following terms:
-
-          liability – the author doesn't provide any warranty and doesn't accepts any liability
-          copyright notice – a copy of the license or copyright notice must be included with software
-          share alike – If you remix, transform, or build upon the material, you can distribute your work under any license
-        </p> -->
       </div>
       <div class="flex flex-col justify-center">
         <p class="py-2">
@@ -190,7 +176,8 @@
         </p>
       </div>
       <div class=" max-[800px]:order-first">
-        <p class="h-full py-5 text-lg max-[800px]:text-base max-[700px]:basis-full pr-10 pl-16 min-[1200px]:pl-44 flex justify-end text-right items-center max-[800px]:text-left max-[800px]:pl-0">
+        <p
+          class="h-full py-5 text-lg max-[800px]:text-base max-[700px]:basis-full pr-10 pl-16 min-[1200px]:pl-44 flex justify-end text-right items-center max-[800px]:text-left max-[800px]:pl-0">
           I'm a 20-year-old from Warsaw, currently studying cryptology and cybersecurity at the Military University of
           Technology in Warsaw. My hobbies include Linux, web development, cybersecurity, skateboarding, and exploring
           all
@@ -215,22 +202,34 @@
       </div>
     </div>
   </div>
-  <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 py-20" id="projects">
-<<<<<<< HEAD
+  <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 py-20 flex flex-col" id="projects">
     <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Projects</h2>
-    <div class="w-full flex flex-wrap gap-16 justify-center">
-      <a href="">
-        <div class="h-80 w-72 border p-8 rounded-lg bg-[#131313] flex flex-col justify-end gap-2">
-          <p class="basis-1/2 flex items-end text-lg font-bold">zsh - config</p>
-          <p class="basis-1/2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, sint.</p>
+    <div class="w-full flex-1 flex items-center flex-wrap gap-16 py-16">
+
+      <a href="https://github.com/all0ver/zsh" target="_blank">
+        <div class="h-80 w-72 border p-8 rounded-lg bg-[#131313] flex flex-col">
+          <div class="basis-1/2 flex items-end">
+            <img src="/img/project.svg" alt="project" class="custom-filter h-14 w-14 border rounded-full p-3">
+          </div>
+          <div class="basis-1/2">
+            <p class="flex items-end text-lg font-bold py-2">zsh - config</p>
+            <p class="text-gray-400">My minimalistic zsh with oh-my-zsh config, with few plugins and step-by-step
+              installation.</p>
+          </div>
         </div>
       </a>
 
-=======
-    <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl mb-16">Projects</h2>
-    <div class="w-full flex flex-wrap gap-16 justify-center">
-      <div class="h-80 w-72 border-2 p-8 rounded bg-[#131313]">Project 1</div>
->>>>>>> 02007fc36a733b4e8d7874f456804e35b7bc09f3
+      <a href="https://github.com/all0ver/zsh" target="_blank">
+        <div class="h-80 w-72 border p-8 rounded-lg bg-[#131313] flex flex-col">
+          <div class="basis-1/2 flex items-end">
+            <img src="/img/project.svg" alt="project" class="custom-filter h-14 w-14 border rounded-full p-3">
+          </div>
+          <div class="basis-1/2">
+            <p class="flex items-end text-lg font-bold py-2">Portfolio</p>
+            <p class="text-gray-400">Portfolio project to work on my Tailwind CSS and understand hosting websites.</p>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
   <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 py-20 flex flex-col" id="contact">
