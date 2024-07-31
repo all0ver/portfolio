@@ -4,6 +4,7 @@ window.onscroll = function () {
   let ul = document.querySelector("#main-navbar-ul"); 
   let navbar = document.querySelector("#main-navbar");
   let about = navbar.offsetTop;
+  let hamburger = document.querySelector("#hamburger-menu");
     
   function myFunction() {
     if (window.scrollY >= about) {
@@ -20,7 +21,9 @@ window.onscroll = function () {
 let button = document.querySelector("#hamburger-button");
 button.addEventListener("click", function() {
   ul.classList.toggle('max-[700px]:hidden');
+  hamburger.classList.toggle('custom-hamburger-animation');
 });
+
 
 let a = document.querySelectorAll(".main-navbar-a");
 

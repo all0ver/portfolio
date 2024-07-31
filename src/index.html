@@ -83,6 +83,40 @@
     .custom-filter {
       filter: invert(89%) sepia(7%) saturate(77%) hue-rotate(161deg) brightness(108%) contrast(92%);
     }
+
+    @keyframes open {
+      from {
+        transform: rotate(0);
+      } to {
+        transform: rotate(45deg);
+      }
+    }
+
+    @keyframes open-2 {
+      from {
+        transform: rotate(0);
+      } to {
+        transform: rotate(-45deg);
+      }
+    }
+
+    .custom-hamburger-animation > :nth-child(3){
+      animation: open 0.25s ease-out;
+      transform: rotate(45deg);
+      position: relative;
+      margin-top: 1.25rem;
+    }
+
+    .custom-hamburger-animation > :nth-child(1) {
+      animation: open-2 0.25s ease-out;
+      transform: rotate(-45deg);
+      position: absolute;
+      margin-top: 1.25rem;
+    }
+
+    .custom-hamburger-animation > :nth-child(2) {
+      display: none;
+    }
   </style>
 
 
@@ -127,11 +161,11 @@
       </a>
     </div>
   </div>
-  <div class="custom-hide custom-transparent" id="main-navbar">
+  <div class="custom-hide custom-transparent z-50" id="main-navbar">
     <button
       class="cursor-pointer hidden max-[700px]:flex absolute w-screen right-0 top-0 p-5 justify-end custom-transparent"
       id="hamburger-button">
-      <ul>
+      <ul id="hamburger-menu">
         <li class="border-2 w-8 my-2"></li>
         <li class="border-2 w-8 my-2"></li>
         <li class="border-2 w-8 my-2"></li>
@@ -232,7 +266,7 @@
       </a>
     </div>
   </div>
-  <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 py-20 flex flex-col" id="contact">
+  <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 pt-20 flex flex-col" id="contact">
     <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Contact</h2>
     <div class="grid grid-cols-2 max-[800px]:grid-cols-1 items-center justify-center flex-1">
       <form action="https://formsubmit.co/7cfd5975b8cf089846258527358b3585" method="POST"
@@ -243,7 +277,7 @@
           <input type="text" name="title" required class="bg-black border-b-4 border-white p-2" placeholder="Title">
         </div>
 
-        <textarea rows="15" name="content" id="content" class="w-full my-4 bg-black border-b-4 border-white p-2"
+        <textarea rows="13" name="content" id="content" class="w-full my-4 bg-black border-b-4 border-white p-2"
           placeholder="Your message"></textarea>
         <input type="hidden" name="_next" value="google.com">
         <input type="hidden" name="_subject" value="New email!">
@@ -252,7 +286,7 @@
       </form>
       <div class="flex flex-col items-center justify-center max-[800px]:justify-end h-full">
         <p class="p-10 rounded bg-slate-900 max-[800px]:hidden">mk</p>
-        <p class="py-4">Mateusz Karpinski 2024</p>
+        <p class="py-4 max-[800px]:mt-10">Mateusz Karpinski 2024</p>
       </div>
     </div>
   </div>
