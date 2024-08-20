@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="src/output.css" rel="stylesheet">
-  <link rel="shortcut icon" href="/src/img/favicon.png" type="image/x-icon">
+  <link href="output.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -88,7 +88,9 @@
     @keyframes open {
       from {
         transform: rotate(0);
-      } to {
+      }
+
+      to {
         transform: rotate(45deg);
       }
     }
@@ -96,27 +98,33 @@
     @keyframes open-2 {
       from {
         transform: rotate(0);
-      } to {
+      }
+
+      to {
         transform: rotate(-45deg);
       }
     }
 
-    .custom-hamburger-animation > :nth-child(3){
+    .custom-hamburger-animation> :nth-child(3) {
       animation: open 0.25s ease-out;
       transform: rotate(45deg);
       position: relative;
       margin-top: 1.25rem;
     }
 
-    .custom-hamburger-animation > :nth-child(1) {
+    .custom-hamburger-animation> :nth-child(1) {
       animation: open-2 0.25s ease-out;
       transform: rotate(-45deg);
       position: absolute;
       margin-top: 1.25rem;
     }
 
-    .custom-hamburger-animation > :nth-child(2) {
+    .custom-hamburger-animation> :nth-child(2) {
       display: none;
+    }
+
+    .custom-grid {
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     }
   </style>
 
@@ -194,7 +202,7 @@
     <div
       class="flex-1 w-full h-full grid grid-cols-2 gap-4 grid-rows-2 max-[800px]:grid-cols-1 max-[800px]:grid-rows-none">
       <div class="flex justify-center items-center">
-        <img src="src/img/person.svg" alt="person" class="custom-filter h-32">
+        <img src="img/person.svg" alt="person" class="custom-filter h-32">
       </div>
       <div class="flex flex-col justify-center">
         <p class="py-2">
@@ -228,23 +236,24 @@
           linkedin: https://www.svgrepo.com/svg/521725/linkedin
           instagram: https://www.svgrepo.com/svg/521711/instagram 
         -->
-        <a href="https://github.com/all0ver" class="h-fit"><img class="h-16 custom-filter" src="src/img/github.svg"
+        <a href="https://github.com/all0ver" class="h-fit"><img class="h-16 custom-filter" src="img/github.svg"
             alt="github"></a>
         <a href="https://www.linkedin.com/in/mateusz-karpi%C5%84ski-2911a6264/" class="h-fit"><img
-            class="h-16 custom-filter" src="src/img/linkedin.svg" alt="linkedin"></a>
+            class="h-16 custom-filter" src="img/linkedin.svg" alt="linkedin"></a>
         <a href="https://www.instagram.com/m.karpinski_/" class="h-fit"><img class="h-16 custom-filter"
-            src="src/img/instagram.svg" alt="instagram"></a>
+            src="img/instagram.svg" alt="instagram"></a>
       </div>
     </div>
   </div>
   <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 py-20 flex flex-col" id="projects">
     <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Projects</h2>
-    <div class="w-full flex-1 flex items-center flex-wrap gap-16 py-16">
 
-      <a href="https://github.com/all0ver/zsh" target="_blank">
+    <div class="w-full flex-1 grid custom-grid place-items-center gap-16 py-16">
+
+      <a href="https://github.com/all0ver/zsh" target="_blank" class="w-fit">
         <div class="h-80 w-72 border p-8 rounded-lg bg-[#131313] flex flex-col">
           <div class="basis-1/2 flex items-end">
-            <img src="/src/img/project.svg" alt="project" class="custom-filter h-14 w-14 border rounded-full p-3">
+            <img src="img/project.svg" alt="project" class="custom-filter h-14 w-14 border rounded-full p-3">
           </div>
           <div class="basis-1/2">
             <p class="flex items-end text-lg font-bold py-2">zsh - config</p>
@@ -254,10 +263,10 @@
         </div>
       </a>
 
-      <a href="https://github.com/all0ver/zsh" target="_blank">
+      <a href="https://github.com/all0ver/zsh" target="_blank" class="w-fit">
         <div class="h-80 w-72 border p-8 rounded-lg bg-[#131313] flex flex-col">
           <div class="basis-1/2 flex items-end">
-            <img src="/src/img/project.svg" alt="project" class="custom-filter h-14 w-14 border rounded-full p-3">
+            <img src="img/project.svg" alt="project" class="custom-filter h-14 w-14 border rounded-full p-3">
           </div>
           <div class="basis-1/2">
             <p class="flex items-end text-lg font-bold py-2">Portfolio</p>
@@ -265,12 +274,26 @@
           </div>
         </div>
       </a>
+
+      <a href="https://github.com/all0ver/goBackBash" target="_blank" class="w-fit">
+        <div class="h-80 w-72 border p-8 rounded-lg bg-[#131313] flex flex-col">
+          <div class="basis-1/2 flex items-end">
+            <img src="img/project.svg" alt="project" class="custom-filter h-14 w-14 border rounded-full p-3">
+          </div>
+          <div class="basis-1/2">
+            <p class="flex items-end text-lg font-bold py-2">goBackBash</p>
+            <p class="text-gray-400">Command-line tool written in bash, that allows you to quickly go back to directory from your history.</p>
+          </div>
+        </div>
+      </a>
+
     </div>
+
   </div>
   <div class="min-h-screen mx-5 lg:mx-20 sm:mx-10 pt-20 flex flex-col" id="contact">
     <h2 class="lg:text-6xl md:text-5xl sm:text-4xl text-3xl">Contact</h2>
     <div class="grid grid-cols-2 max-[800px]:grid-cols-1 items-center justify-center flex-1">
-      <form method="POST" action="https://formsubmit.co/7cfd5975b8cf089846258527358b3585" 
+      <form method="POST" action="https://formsubmit.co/7cfd5975b8cf089846258527358b3585"
         class="flex justify-center flex-col">
         <div class="grid grid-cols-2 gap-4">
           <input type="email" name="email" required class="bg-black border-b-4 border-white p-2"
